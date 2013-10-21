@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		13115BE51815367F00CE2B49 /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BE41815367F00CE2B49 /* YelpClient.m */; };
+		13115BE8181536A200CE2B49 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BE7181536A200CE2B49 /* Business.m */; };
+		13115BEB18153C2500CE2B49 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BEA18153C2500CE2B49 /* Review.m */; };
 		13CFE252180F803B00946D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE251180F803B00946D84 /* Foundation.framework */; };
 		13CFE254180F803B00946D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE253180F803B00946D84 /* CoreGraphics.framework */; };
 		13CFE256180F803B00946D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE255180F803B00946D84 /* UIKit.framework */; };
@@ -36,6 +39,12 @@
 
 /* Begin PBXFileReference section */
 		06EF7571DC954B67A6831EA9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		13115BE31815367F00CE2B49 /* YelpClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YelpClient.h; sourceTree = "<group>"; };
+		13115BE41815367F00CE2B49 /* YelpClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YelpClient.m; sourceTree = "<group>"; };
+		13115BE6181536A200CE2B49 /* Business.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Business.h; sourceTree = "<group>"; };
+		13115BE7181536A200CE2B49 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
+		13115BE918153C2500CE2B49 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
+		13115BEA18153C2500CE2B49 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
 		13CFE24E180F803B00946D84 /* BobaBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CFE251180F803B00946D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13CFE253180F803B00946D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,6 +92,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		13115BE21815366F00CE2B49 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				13115BE31815367F00CE2B49 /* YelpClient.h */,
+				13115BE41815367F00CE2B49 /* YelpClient.m */,
+				13115BE6181536A200CE2B49 /* Business.h */,
+				13115BE7181536A200CE2B49 /* Business.m */,
+				13115BE918153C2500CE2B49 /* Review.h */,
+				13115BEA18153C2500CE2B49 /* Review.m */,
+			);
+			name = Models;
+			sourceTree = "<group>";
+		};
 		13CFE245180F803B00946D84 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +140,7 @@
 		13CFE257180F803B00946D84 /* BobaBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				13115BE21815366F00CE2B49 /* Models */,
 				13CFE260180F803B00946D84 /* AppDelegate.h */,
 				13CFE261180F803B00946D84 /* AppDelegate.m */,
 				13CFE263180F803B00946D84 /* Main.storyboard */,
@@ -290,9 +313,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				13115BE8181536A200CE2B49 /* Business.m in Sources */,
+				13115BE51815367F00CE2B49 /* YelpClient.m in Sources */,
 				13CFE268180F803B00946D84 /* ViewController.m in Sources */,
 				13CFE262180F803B00946D84 /* AppDelegate.m in Sources */,
 				13CFE25E180F803B00946D84 /* main.m in Sources */,
+				13115BEB18153C2500CE2B49 /* Review.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
