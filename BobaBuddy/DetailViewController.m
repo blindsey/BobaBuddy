@@ -30,9 +30,8 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     NSURL *imageURL = [NSURL URLWithString:self.business.imageURL];
-    [self.imageView setURL:imageURL];
+    [self.imageView setImageWithURL:imageURL];
     
-    self.hoursLabel.text = self.business.openHours;
     self.phoneLabel.text = self.business.phone;
     
     [self.tableView reloadData];
