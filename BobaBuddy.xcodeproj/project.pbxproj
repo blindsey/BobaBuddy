@@ -17,13 +17,15 @@
 		13CFE25E180F803B00946D84 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFE25D180F803B00946D84 /* main.m */; };
 		13CFE262180F803B00946D84 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFE261180F803B00946D84 /* AppDelegate.m */; };
 		13CFE265180F803B00946D84 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 13CFE263180F803B00946D84 /* Main.storyboard */; };
-		13CFE268180F803B00946D84 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFE267180F803B00946D84 /* ViewController.m */; };
+		13CFE268180F803B00946D84 /* ListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFE267180F803B00946D84 /* ListViewController.m */; };
 		13CFE26A180F803B00946D84 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13CFE269180F803B00946D84 /* Images.xcassets */; };
 		13CFE271180F803B00946D84 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE270180F803B00946D84 /* XCTest.framework */; };
 		13CFE272180F803B00946D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE251180F803B00946D84 /* Foundation.framework */; };
 		13CFE273180F803B00946D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE255180F803B00946D84 /* UIKit.framework */; };
 		13CFE27B180F803B00946D84 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 13CFE279180F803B00946D84 /* InfoPlist.strings */; };
 		13CFE27D180F803B00946D84 /* BobaBuddyTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 13CFE27C180F803B00946D84 /* BobaBuddyTests.m */; };
+		A017A1A518162789002E5BCD /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A017A1A418162789002E5BCD /* DetailViewController.m */; };
+		A017A1A818162C44002E5BCD /* ReviewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A017A1A718162C44002E5BCD /* ReviewCell.m */; };
 		CC546D95A9F34ACF9B552EFD /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 06EF7571DC954B67A6831EA9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -56,8 +58,8 @@
 		13CFE260180F803B00946D84 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		13CFE261180F803B00946D84 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		13CFE264180F803B00946D84 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		13CFE266180F803B00946D84 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		13CFE267180F803B00946D84 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		13CFE266180F803B00946D84 /* ListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ListViewController.h; sourceTree = "<group>"; };
+		13CFE267180F803B00946D84 /* ListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ListViewController.m; sourceTree = "<group>"; };
 		13CFE269180F803B00946D84 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		13CFE26F180F803B00946D84 /* BobaBuddyTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BobaBuddyTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CFE270180F803B00946D84 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -65,6 +67,10 @@
 		13CFE27A180F803B00946D84 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		13CFE27C180F803B00946D84 /* BobaBuddyTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BobaBuddyTests.m; sourceTree = "<group>"; };
 		324E7DD0EBD348BDA32144F4 /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
+		A017A1A318162789002E5BCD /* DetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A017A1A418162789002E5BCD /* DetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A017A1A618162C44002E5BCD /* ReviewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewCell.h; sourceTree = "<group>"; };
+		A017A1A718162C44002E5BCD /* ReviewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -144,8 +150,12 @@
 				13CFE260180F803B00946D84 /* AppDelegate.h */,
 				13CFE261180F803B00946D84 /* AppDelegate.m */,
 				13CFE263180F803B00946D84 /* Main.storyboard */,
-				13CFE266180F803B00946D84 /* ViewController.h */,
-				13CFE267180F803B00946D84 /* ViewController.m */,
+				13CFE266180F803B00946D84 /* ListViewController.h */,
+				13CFE267180F803B00946D84 /* ListViewController.m */,
+				A017A1A318162789002E5BCD /* DetailViewController.h */,
+				A017A1A418162789002E5BCD /* DetailViewController.m */,
+				A017A1A618162C44002E5BCD /* ReviewCell.h */,
+				A017A1A718162C44002E5BCD /* ReviewCell.m */,
 				13CFE269180F803B00946D84 /* Images.xcassets */,
 				13CFE258180F803B00946D84 /* Supporting Files */,
 			);
@@ -314,11 +324,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				13115BE8181536A200CE2B49 /* Business.m in Sources */,
+				A017A1A818162C44002E5BCD /* ReviewCell.m in Sources */,
 				13115BE51815367F00CE2B49 /* YelpClient.m in Sources */,
-				13CFE268180F803B00946D84 /* ViewController.m in Sources */,
+				13CFE268180F803B00946D84 /* ListViewController.m in Sources */,
 				13CFE262180F803B00946D84 /* AppDelegate.m in Sources */,
 				13CFE25E180F803B00946D84 /* main.m in Sources */,
 				13115BEB18153C2500CE2B49 /* Review.m in Sources */,
+				A017A1A518162789002E5BCD /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
