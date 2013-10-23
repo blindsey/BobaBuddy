@@ -21,9 +21,14 @@
         _mobileURL = [data objectForKey:@"mobile_url"];
         _snippetText = [data objectForKey:@"snippet_text"];
         _phone = [data objectForKey:@"display_phone"];
+        _distance = [[data objectForKey:@"distance"] floatValue];
         _rating = [[data objectForKey:@"rating"] floatValue];
         _ratingImageURL = [data objectForKey:@"rating_img_url"];
+        _largeRatingImageURL = [data objectForKey:@"rating_img_url_large"];
         _reviews = [Review reviewsWithArray:[data objectForKey:@"reviews"]];
+
+        NSArray *addresses = [data valueForKeyPath:@"location.display_address"];
+        _address = addresses[0];
     }
     return self;
 }

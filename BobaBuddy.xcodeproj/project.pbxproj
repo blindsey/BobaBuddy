@@ -10,6 +10,8 @@
 		13115BE51815367F00CE2B49 /* YelpClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BE41815367F00CE2B49 /* YelpClient.m */; };
 		13115BE8181536A200CE2B49 /* Business.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BE7181536A200CE2B49 /* Business.m */; };
 		13115BEB18153C2500CE2B49 /* Review.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BEA18153C2500CE2B49 /* Review.m */; };
+		13115BEE1818716900CE2B49 /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BED1818716900CE2B49 /* MapViewController.m */; };
+		13115BF21818731A00CE2B49 /* ListResultCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 13115BF11818731A00CE2B49 /* ListResultCell.m */; };
 		13CFE252180F803B00946D84 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE251180F803B00946D84 /* Foundation.framework */; };
 		13CFE254180F803B00946D84 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE253180F803B00946D84 /* CoreGraphics.framework */; };
 		13CFE256180F803B00946D84 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 13CFE255180F803B00946D84 /* UIKit.framework */; };
@@ -47,6 +49,10 @@
 		13115BE7181536A200CE2B49 /* Business.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Business.m; sourceTree = "<group>"; };
 		13115BE918153C2500CE2B49 /* Review.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Review.h; sourceTree = "<group>"; };
 		13115BEA18153C2500CE2B49 /* Review.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Review.m; sourceTree = "<group>"; };
+		13115BEC1818716900CE2B49 /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
+		13115BED1818716900CE2B49 /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
+		13115BF01818731A00CE2B49 /* ListResultCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListResultCell.h; sourceTree = "<group>"; };
+		13115BF11818731A00CE2B49 /* ListResultCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListResultCell.m; sourceTree = "<group>"; };
 		13CFE24E180F803B00946D84 /* BobaBuddy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BobaBuddy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13CFE251180F803B00946D84 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		13CFE253180F803B00946D84 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -111,6 +117,19 @@
 			name = Models;
 			sourceTree = "<group>";
 		};
+		13115BEF1818717200CE2B49 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				13115BEC1818716900CE2B49 /* MapViewController.h */,
+				13115BED1818716900CE2B49 /* MapViewController.m */,
+				13CFE266180F803B00946D84 /* ListViewController.h */,
+				13CFE267180F803B00946D84 /* ListViewController.m */,
+				A017A1A318162789002E5BCD /* DetailViewController.h */,
+				A017A1A418162789002E5BCD /* DetailViewController.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		13CFE245180F803B00946D84 = {
 			isa = PBXGroup;
 			children = (
@@ -146,14 +165,13 @@
 		13CFE257180F803B00946D84 /* BobaBuddy */ = {
 			isa = PBXGroup;
 			children = (
+				13115BEF1818717200CE2B49 /* Controllers */,
 				13115BE21815366F00CE2B49 /* Models */,
 				13CFE260180F803B00946D84 /* AppDelegate.h */,
 				13CFE261180F803B00946D84 /* AppDelegate.m */,
 				13CFE263180F803B00946D84 /* Main.storyboard */,
-				13CFE266180F803B00946D84 /* ListViewController.h */,
-				13CFE267180F803B00946D84 /* ListViewController.m */,
-				A017A1A318162789002E5BCD /* DetailViewController.h */,
-				A017A1A418162789002E5BCD /* DetailViewController.m */,
+				13115BF01818731A00CE2B49 /* ListResultCell.h */,
+				13115BF11818731A00CE2B49 /* ListResultCell.m */,
 				A017A1A618162C44002E5BCD /* ReviewCell.h */,
 				A017A1A718162C44002E5BCD /* ReviewCell.m */,
 				13CFE269180F803B00946D84 /* Images.xcassets */,
@@ -325,7 +343,9 @@
 			files = (
 				13115BE8181536A200CE2B49 /* Business.m in Sources */,
 				A017A1A818162C44002E5BCD /* ReviewCell.m in Sources */,
+				13115BF21818731A00CE2B49 /* ListResultCell.m in Sources */,
 				13115BE51815367F00CE2B49 /* YelpClient.m in Sources */,
+				13115BEE1818716900CE2B49 /* MapViewController.m in Sources */,
 				13CFE268180F803B00946D84 /* ListViewController.m in Sources */,
 				13CFE262180F803B00946D84 /* AppDelegate.m in Sources */,
 				13CFE25E180F803B00946D84 /* main.m in Sources */,

@@ -10,10 +10,11 @@
 #import "AFNetworking.h"
 
 #define YELP_BASE_URL [NSURL URLWithString:@"http://api.yelp.com/"]
+
 #define YELP_CONSUMER_KEY @"yBEqbJ68vTplgYPpDDBedQ"
 #define YELP_CONSUMER_SECRET @"A6GktRq4VjWVshMgQtUYu2GpkJc"
-
-#define ACCESS_TOKEN_DEFAULTS_KEY @"BobaAccessTokenKey"
+#define YELP_TOKEN @"W45l17dkD4lpgFstqTc4ysB33akbbbfY"
+#define YELP_TOKEN_SECRET @"r3xqK0R2nY0haCehlozr6qq2SRM"
 
 @implementation YelpClient
 
@@ -23,43 +24,25 @@
     static YelpClient *instance;
     
     dispatch_once(&once, ^{
-        instance = [[YelpClient alloc] initWithBaseURL:YELP_BASE_URL key:YELP_CONSUMER_KEY secret:YELP_CONSUMER_SECRET];
+        instance = [[YelpClient alloc] initWithBaseURL:YELP_BASE_URL];
     });
     
     return instance;
 }
 
-- (id)initWithBaseURL:(NSURL *)url key:(NSString *)key secret:(NSString *)secret
+- (id)initWithBaseURL:(NSURL *)url
 {
-    self = [super initWithBaseURL:url key:key secret:secret];
+    self = [super initWithBaseURL:url key:YELP_CONSUMER_KEY secret:YELP_CONSUMER_SECRET];
     if (self) {
+        self.accessToken = [[AFOAuth1Token alloc] initWithKey:YELP_TOKEN
+                                                       secret:YELP_TOKEN_SECRET
+                                                      session:nil
+                                                   expiration:[NSDate distantFuture]
+                                                    renewable:NO];
         [self registerHTTPOperationClass:[AFJSONRequestOperation class]];
-        
-        NSData *data = [[NSUserDefaults standardUserDefaults] dataForKey:ACCESS_TOKEN_DEFAULTS_KEY];
-        if (data) {
-            self.accessToken = [NSKeyedUnarchiver unarchiveObjectWithData:data];
-        }
+        [self setDefaultHeader:@"Accept" value:@"application/json"];
     }
     return self;
-}
-
-- (void)setAccessToken:(AFOAuth1Token *)accessToken
-{
-    [super setAccessToken:accessToken];
-    
-    if (accessToken) {
-        NSData *data = [NSKeyedArchiver archivedDataWithRootObject:accessToken];
-        [[NSUserDefaults standardUserDefaults] setObject:data forKey:ACCESS_TOKEN_DEFAULTS_KEY ];
-    } else {
-        [[NSUserDefaults standardUserDefaults] removeObjectForKey:ACCESS_TOKEN_DEFAULTS_KEY];
-    }
-    [[NSUserDefaults standardUserDefaults] synchronize];
-}
-
-- (void)authorizeWithCallbackUrl:(NSURL *)callbackUrl success:(void (^)(AFOAuth1Token *, id))success failure:(void (^)(NSError *))failure
-{
-    self.accessToken = nil;
-    [super authorizeUsingOAuthWithRequestTokenPath:@"oauth/request_token" userAuthorizationPath:@"oauth/authorize" callbackURL:callbackUrl accessTokenPath:@"oauth/access_token" accessMethod:@"POST" scope:nil success:success failure:failure];
 }
 
 - (void)searchWithLatitude:(float)latitude andLongitude:(float)longitude success:(void (^)(AFHTTPRequestOperation *, id))success failure:(void (^)(AFHTTPRequestOperation *, NSError *))failure

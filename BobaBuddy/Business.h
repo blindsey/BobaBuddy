@@ -15,12 +15,16 @@
 @property (strong, nonatomic, readonly) NSString *id;
 @property (strong, nonatomic, readonly) NSString *name;
 @property (strong, nonatomic, readonly) NSString *imageURL;
+@property (strong, nonatomic, readonly) NSString *address;
 @property (strong, nonatomic, readonly) NSString *mobileURL;
 @property (strong, nonatomic, readonly) NSString *snippetText;
 @property (strong, nonatomic, readonly) NSString *phone;
 
+@property (assign, nonatomic, readonly) float distance; // in meters
+
 @property (assign, nonatomic, readonly) float rating;
 @property (strong, nonatomic, readonly) NSString *ratingImageURL; // 84x17
+@property (strong, nonatomic, readonly) NSString *largeRatingImageURL; // 166x30
 
 @property (strong, nonatomic, readonly) NSArray *reviews; // of Reviews
 
